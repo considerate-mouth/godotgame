@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd2d10ws4kjkl"]
+[gd_scene load_steps=6 format=3 uid="uid://dd2d10ws4kjkl"]
 
 [ext_resource type="Texture2D" uid="uid://cfexjry34paub" path="res://Art/Background/13801.jpg" id="1_72rpd"]
 [ext_resource type="FontFile" uid="uid://11uporl3oehk" path="res://Assets/Fonts/Ethnocentric Rg It.otf" id="2_x6gfm"]
@@ -7,34 +7,38 @@
 texture = ExtResource("1_72rpd")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8psub"]
+content_margin_left = 5.0
 bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+corner_detail = 18
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
-anti_aliasing_size = 2.0
+anti_aliasing_size = 3.145
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87dyd"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+border_blend = true
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+corner_detail = 15
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
-
-[sub_resource type="Theme" id="Theme_1nl1n"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_t0c2q"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k4dey"]
-texture = SubResource("CanvasTexture_t0c2q")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -53,104 +57,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yy5nt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = -101.0
-offset_right = 125.0
-offset_bottom = 90.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 27
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_x6gfm")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
-text = "Start game
-"
-
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-theme = SubResource("Theme_1nl1n")
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_x6gfm")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/focus = SubResource("StyleBoxTexture_k4dey")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
-text = "Settings
-"
-
-[node name="Button4" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_x6gfm")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
-theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
-text = "Settings
-"
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -168,3 +74,99 @@ theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("2_x6gfm")
 theme_override_font_sizes/font_size = 65
 text = "        Terran Colony"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -54.0
+offset_right = 155.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="StartButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_x6gfm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
+text = "Start Game"
+
+[node name="LoadButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_x6gfm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
+text = "Load Game
+"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_x6gfm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87dyd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8psub")
+theme_override_styles/normal = SubResource("StyleBoxFlat_87dyd")
+text = "Settings
+"
